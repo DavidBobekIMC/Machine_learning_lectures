@@ -3,8 +3,9 @@
 ## Each folder represent my personal growth in the field of Machine Learning and Data Science
 
 ### Lecture 1 - Introduction
-### Lecture 1 - Regression and Polynomial Regression
-### Lecture 2 - KNN and Decsision Trees 
+### Lecture 2 - Regression and Polynomial Regression
+### Lecture 3 - KNN and Decsision Trees
+### Elearning - Data support vectors
 * Decision Trees used to classify the data in a graph 
 
 <img src="https://user-images.githubusercontent.com/114572512/224649987-81984382-c5fc-49dd-86b6-a3704424784a.png" width="400" />
