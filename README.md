@@ -1,1 +1,1 @@
-# Machine_learning_lectures
+# Machine learning lectures
