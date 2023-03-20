@@ -6,6 +6,7 @@
 # 5. class (0 is genuine, 1 is forged)
 
 #there is no package called 'rstudioapi'
+#install.packages("rstudioapi")
 
 #plotly
 #install.packages("plotly")
@@ -19,18 +20,19 @@ library(data.table) # Data wrangling (Py_equivalent: pandas, polars, pydatatable
 library(plotly) # Beautiful plots
 library(rpart) # Decision trees
 library(rpart.plot)
+
 library(caret) # ML tools http://topepo.github.io/caret/available-models.html
 #library(mlr3) # ML tools (Py_equivalent: Scikit learn)
 
 # Load the data ----
-dt <- fread("lecture_3/Lecture_04_Banknotes.txt")
+dt <- fread("Lecture_04_Banknotes.txt")
 setnames(dt,
          old = c("V1","V2","V3","V4","V5"),
          new = c("Variance", "Skewness", "Curtosis", "Entropy", "Class"))
 dt[, Class := as.factor(Class)]
 
 # or combined all in one fread
-dt <- fread("lecture_3/Lecture_04_Banknotes.txt",
+dt <- fread("Lecture_04_Banknotes.txt",
             col.names = c("Variance", "Skewness", "Curtosis", "Entropy", "Class"),
             colClasses = c("numeric","numeric","numeric","numeric","factor"))
 
@@ -95,7 +97,7 @@ for(i in colnames(dt[,!"Class"])){
 subplot(plots, nrows = 2, titleY = T, margin = 0.05)
 
 # It's ordered, we should shuffle it first.
-set.seed(12345)
+set.seed(1)
 dt <- dt[sample(1:nrow(dt))]
 
 # Look if class is distinguishable from with the three most important variables
@@ -115,7 +117,7 @@ plot_ly(data = dt, type = 'splom', color = ~Class, marker = list(size = 4),
       list(label='Entropy', values=~Entropy)))
 
 # Split training/test ----
-set.seed(12345)
+set.seed(9)
 idx <- createDataPartition(dt[,Class], p = 0.8, list = F, times = 1)
 training <- dt[idx]
 test <- dt[!idx]
@@ -139,6 +141,13 @@ printcp(fit)
 plotcp(fit)
 summary(fit)
 rpart.plot(fit, type = 2, extra = 101, fallen.leaves = F, main = "Classification Tree for Banknotes", tweak=1.2)
+
+#Accuracy
+pred <- predict(fit, test_x, type = "class")
+table(pred, test_y)
+mean(pred == test_y)
+
+
 
 ## OPTION 2: Entire + pruning ----
 # Grow the entire tree, until we see it overfitting and then "prune" it
@@ -193,3 +202,6 @@ table(my_pred,test_y)
 confusionMatrix(data = my_pred, reference = test_y, positive = "Forged", mode = "prec_recall")
 summary(fit.caret)
 rpart.plot(fit.caret$finalModel)
+
+
+
