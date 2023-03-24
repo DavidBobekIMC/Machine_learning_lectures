@@ -80,7 +80,7 @@ Advantages: includes regularization techniques, such as L1 and L2 regularization
 #### Process of selecting the best set of hyperparameters (set before training the model) for a machine learning algorithm
 
 ### Random forest
-```text
+```python
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
@@ -104,7 +104,7 @@ print(grid_search.best_params_)
 ```
 
 ### AdaBoost
-```text
+```python
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
@@ -128,7 +128,7 @@ grid_search.fit(X, y)
 print(grid_search.best_params_)
 ```
 ### XGBoost
-```text
+```python
 import xgboost as xgb
 from sklearn.model_selection import GridSearchCV
 
@@ -151,7 +151,7 @@ grid_search.fit(X, y)
 print(grid_search.best_params_)
 ```
 ### Support Vector Machine
-```text
+```python
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 
