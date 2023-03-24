@@ -4,11 +4,15 @@
 
 ### Lecture 1 - Introduction
 ### Lecture 2 - Regression and Polynomial Regression
-### Lecture 3 - KNN and Decsision Trees
+### Lecture 3 - KNN and Decision Trees
+### Lecture 4 - Random Forest, ADAboost and XGBoost, Ensembling, Tune
 ### Elearning - Data support vectors
-* Decision Trees used to classify the data in a graph 
 
-<img src="https://user-images.githubusercontent.com/114572512/224649987-81984382-c5fc-49dd-86b6-a3704424784a.png" width="400" />
+
+
+## Decision Trees used to classify the data in a graph 
+
+<img src="https://user-images.githubusercontent.com/114572512/224649987-81984382-c5fc-49dd-86b6-a3704424784a.png" height="200" />
 
 
 
@@ -35,4 +39,15 @@ Problems:
   
   
  If i have to classify smth on a graph  that looks like clustering = decision tree
+
+```
+
+## Random Forest
+
+## ADAboost
+
+## XGBoost
+
+## Parameter Tuning
    
+## Suppor Vector Machine 
