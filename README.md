@@ -4,7 +4,7 @@
 
 ### Lecture 1 - Introduction
 ### Lecture 2 - Regression and Polynomial Regression
-### Lecture 3 - KNN and Decision Trees
+### Lecture 3 - KNN and Decision Trees = in KNN we tune K and the number of neighbors
 ### Lecture 4 - Random Forest, ADAboost and XGBoost, Ensembling, Tune
 ### Elearning - Data support vectors
 
@@ -77,6 +77,15 @@ Advantages: includes regularization techniques, such as L1 and L2 regularization
 ```
 
 ## Parameter Tuning (hyperparameter optimization)
+```text 
+* Decision trees: max_depth, min_samples_leaf, min_samples_split, max_features
+* Random forest: n_estimators, max_depth, min_samples_leaf, min_samples_split, max_features
+* AdaBoost: n_estimators, learning_rate
+* XGBoost: n_estimators, learning_rate, max_depth, subsample, colsample_bytree
+* KN: K, n_neighbors
+```
+
+
 #### Process of selecting the best set of hyperparameters (set before training the model) for a machine learning algorithm
 
 ### Random forest

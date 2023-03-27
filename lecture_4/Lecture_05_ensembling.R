@@ -13,7 +13,7 @@ library(plotly)
 library(ranger) # the fastest and better random forest implementation
 #install.packages("fastAdaboost") # Adaboost
 library(fastAdaboost) # Adaboost
-#install.packages("xgboost") # Extreme Gradient boosting
+ #install.packages("xgboost") # Extreme Gradient boosting
 library(xgboost) # Extreme Gradient boosting
 #library(imbalance) # oversampling
 #install.packages("ROSE") # Synthetic generation of new data to rebalance
