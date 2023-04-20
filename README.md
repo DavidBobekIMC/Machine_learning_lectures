@@ -76,7 +76,7 @@ Benefit: Not usually overfitting
 Advantages: includes regularization techniques, such as L1 and L2 regularization, to prevent overfitting
 ```
 
-## Parameter Tuning (hyperparameter optimization)
+## Parameter Tuning (hyperparameter optimization)   
 ```text 
 * Decision trees: max_depth, min_samples_leaf, min_samples_split, max_features
 * Random forest: n_estimators, max_depth, min_samples_leaf, min_samples_split, max_features
