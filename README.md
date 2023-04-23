@@ -184,9 +184,12 @@ print(grid_search.best_params_)
 
 #### Priniple: Finding patterns in data without any labels or target variables 
 #### Usecase: Clustering, Dimensionality reduction, Anomaly detection
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/114572512/233852902-0e61877f-4490-456a-9c0f-a032af89baf8.png">
 
 ## Clustering
 ### Priniple: Finding natural groupings among objects in a dataset
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233852943-6d640a0d-9c73-4044-acd4-5e4bbf50e3f3.png">
+
 ```text
 OBJECTIVE
 * Maximize similarity within clusters (intra-cluster): cohesive within clusters
@@ -217,6 +220,9 @@ Soft clustering: each data point has a probability of belonging to multiple clus
 * Objective: Minimize the sum of squared distances between the data points and their assigned clusters
 * Each point assigned to the closest centroid
 
+<img height="200"" alt="image" src="https://user-images.githubusercontent.com/114572512/233853757-8061367e-e9ba-49fb-b9bf-818b26b81c0f.png">
+
+
 ### Steps:
 1. Randomly initialize k centroids (random locations)
 2. Assign each data point to the closest centroid   
@@ -229,6 +235,8 @@ Soft clustering: each data point has a probability of belonging to multiple clus
 ```text
 * Plot the number of clusters against the within-cluster sum-of-squares (WCSS)
 ```
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853818-a157815f-b5f4-497f-8373-5803d7ed0119.png">
+
 * We are picking the point where the WCSS starts to flatten out (elbow point)
 * The elbow point is the optimal number of clusters
 
@@ -236,6 +244,9 @@ Soft clustering: each data point has a probability of belonging to multiple clus
 ```text
 * Measure of how similar an object is to its own cluster compared to other clusters
 ```
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853016-124bbfcf-8754-44b9-897b-088a190b0ca7.png">
+
+
 * The silhouette score is bounded between -1 for incorrect clustering and +1 for highly dense clustering
 * Takes extremely long to compute
 * The higher the silhouette score, the better the clustering
