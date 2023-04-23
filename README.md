@@ -185,13 +185,64 @@ print(grid_search.best_params_)
 #### Priniple: Finding patterns in data without any labels or target variables 
 #### Usecase: Clustering, Dimensionality reduction, Anomaly detection
 
-### Clustering
-#### Priniple: Grouping data points into clusters based on their similarity
+## Clustering
+### Priniple: Finding natural groupings among objects in a dataset
+```text
+OBJECTIVE
+* Maximize similarity within clusters (intra-cluster): cohesive within clusters
+* Minimize similarity between clusters (inter-cluster): distinctive between cluster
+```
+### Main Question: How many clusters should we have?
+```text 
+* Elbow method: plot the number of clusters against the within-cluster sum-of-squares (WCSS)
+* Silhouette score: measure of how similar an object is to its own cluster compared to other clusters
+```
 
+### Types of clustering:
+1. Paritional algorithms: (K-means, K-medoids) 
+2. Hierarchical algorithms: Hierachicla decomposition of the given set of points (Diana, Agnes)
+3. Density-based algorithms: Based on connectivityand density = Regions based on density   (DBSCAN, OPTICS)
 
-
-### Models:
-1. K-means
+### Hard vs Soft clustering
+```text
+Hard clustering: each data point either belongs to only one cluster 
+```
+```text 
+Soft clustering: each data point has a probability of belonging to multiple clusters
+```
 
 ## K-means
-```text 
+* Unlabelled data
+* Principle of: Assigning centroids and than updating them based on the mean of the data points in the cluster
+* Objective: Minimize the sum of squared distances between the data points and their assigned clusters
+* Each point assigned to the closest centroid
+
+### Steps:
+1. Randomly initialize k centroids (random locations)
+2. Assign each data point to the closest centroid   
+3. Update the centroids to the mean of the data points that are assigned to them
+4. Repeat steps 2 and 3 until the centroids don't change
+
+### Choosing the number of clusters 
+
+#### Elbow method
+```text
+* Plot the number of clusters against the within-cluster sum-of-squares (WCSS)
+```
+* We are picking the point where the WCSS starts to flatten out (elbow point)
+* The elbow point is the optimal number of clusters
+
+#### Silhouette score
+```text
+* Measure of how similar an object is to its own cluster compared to other clusters
+```
+* The silhouette score is bounded between -1 for incorrect clustering and +1 for highly dense clustering
+* Takes extremely long to compute
+* The higher the silhouette score, the better the clustering
+
+### Evaluation of clustering
+```text
+* Elbow method = minimising the within-cluster sum-of-squares (WCSS)
+```
+```text
+* Silhouette score = maximising the silhoute score for each cluster
