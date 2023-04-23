@@ -180,22 +180,18 @@ grid_search.fit(X, y)
 print(grid_search.best_params_)
 ```
 
+## Unsupervised Learning
 
-## Suppor Vector Machine 
-#### Find the optimal hyperplane that separates the data points of different classes
-<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/227638977-39009558-0efe-4f08-b0f3-575d6793dd83.png">
+#### Priniple: Finding patterns in data without any labels or target variables 
+#### Usecase: Clustering, Dimensionality reduction, Anomaly detection
 
-```text
-Hyperplane: Hyperplane is defined by a set of parameters that are learned from the training data.
-```
-```text
-Boundary: Can be linear but also polynomial
-```
-```text
-Advantages: 
-* image recognition
-* Memory efficient
-* Robust to outliers: finding the best decision among the support vectors
-* Regularization
-```
+### Clustering
+#### Priniple: Grouping data points into clusters based on their similarity
 
+
+
+### Models:
+1. K-means
+
+## K-means
+```text 
