@@ -220,7 +220,7 @@ Soft clustering: each data point has a probability of belonging to multiple clus
 * Objective: Minimize the sum of squared distances between the data points and their assigned clusters
 * Each point assigned to the closest centroid
 
-<img height="200"" alt="image" src="https://user-images.githubusercontent.com/114572512/233853757-8061367e-e9ba-49fb-b9bf-818b26b81c0f.png">
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853757-8061367e-e9ba-49fb-b9bf-818b26b81c0f.png">
 
 
 ### Steps:
