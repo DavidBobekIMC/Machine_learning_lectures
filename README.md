@@ -181,28 +181,80 @@ grid_search.fit(X, y)
 print(grid_search.best_params_)
 ```
 
+## Unsupervised Learning
 
-## Suppor Vector Machine 
-#### Find the optimal hyperplane that separates the data points of different classes
-<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/227638977-39009558-0efe-4f08-b0f3-575d6793dd83.png">
+#### Priniple: Finding patterns in data without any labels or target variables 
+#### Usecase: Clustering, Dimensionality reduction, Anomaly detection
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/114572512/233852902-0e61877f-4490-456a-9c0f-a032af89baf8.png">
+
+## Clustering
+### Priniple: Finding natural groupings among objects in a dataset
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233852943-6d640a0d-9c73-4044-acd4-5e4bbf50e3f3.png">
 
 ```text
-Hyperplane: Hyperplane is defined by a set of parameters that are learned from the training data.
+OBJECTIVE
+* Maximize similarity within clusters (intra-cluster): cohesive within clusters
+* Minimize similarity between clusters (inter-cluster): distinctive between cluster
+```
+### Main Question: How many clusters should we have?
+```text 
+* Elbow method: plot the number of clusters against the within-cluster sum-of-squares (WCSS)
+* Silhouette score: measure of how similar an object is to its own cluster compared to other clusters
+```
+
+### Types of clustering:
+1. Paritional algorithms: (K-means, K-medoids) 
+2. Hierarchical algorithms: Hierachicla decomposition of the given set of points (Diana, Agnes)
+3. Density-based algorithms: Based on connectivityand density = Regions based on density   (DBSCAN, OPTICS)
+
+### Hard vs Soft clustering
+```text
+Hard clustering: each data point either belongs to only one cluster 
+```
+```text 
+Soft clustering: each data point has a probability of belonging to multiple clusters
+```
+
+## K-means
+* Unlabelled data
+* Principle of: Assigning centroids and than updating them based on the mean of the data points in the cluster
+* Objective: Minimize the sum of squared distances between the data points and their assigned clusters
+* Each point assigned to the closest centroid
+
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853757-8061367e-e9ba-49fb-b9bf-818b26b81c0f.png">
+
+
+### Steps:
+1. Randomly initialize k centroids (random locations)
+2. Assign each data point to the closest centroid   
+3. Update the centroids to the mean of the data points that are assigned to them
+4. Repeat steps 2 and 3 until the centroids don't change
+
+### Choosing the number of clusters 
+
+#### Elbow method
+```text
+* Plot the number of clusters against the within-cluster sum-of-squares (WCSS)
+```
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853818-a157815f-b5f4-497f-8373-5803d7ed0119.png">
+
+* We are picking the point where the WCSS starts to flatten out (elbow point)
+* The elbow point is the optimal number of clusters
+
+#### Silhouette score
+```text
+* Measure of how similar an object is to its own cluster compared to other clusters
+```
+<img height="200" alt="image" src="https://user-images.githubusercontent.com/114572512/233853016-124bbfcf-8754-44b9-897b-088a190b0ca7.png">
+
+
+* The silhouette score is bounded between -1 for incorrect clustering and +1 for highly dense clustering
+* Takes extremely long to compute
+* The higher the silhouette score, the better the clustering
+
+### Evaluation of clustering
+```text
+* Elbow method = minimising the within-cluster sum-of-squares (WCSS)
 ```
 ```text
-Boundary: Can be linear but also polynomial
-```
-```text
-Advantages: 
-* image recognition
-* Memory efficient
-* Robust to outliers: finding the best decision among the support vectors
-* Regularization
-```
-
-# Clustering
-
-
-# KNN
-
-
+* Silhouette score = maximising the silhoute score for each cluster
