@@ -4,8 +4,9 @@
 
 ### Lecture 1 - Introduction
 ### Lecture 2 - Regression and Polynomial Regression
-### Lecture 3 - KNN and Decision Trees = in KNN we tune K and the number of neighbors
-### Lecture 4 - Random Forest, ADAboost and XGBoost, Ensembling, Tune
+### Lecture 3 - Random Forest, ADAboost and XGBoost, Ensembling, Tune
+### Lecture 4 - KNN and Decision Trees = in KNN we tune K and the number of neighbors
+
 ### Elearning - Data support vectors
 
 ## Topics: 
@@ -198,4 +199,10 @@ Advantages:
 * Robust to outliers: finding the best decision among the support vectors
 * Regularization
 ```
+
+# Clustering
+
+
+# KNN
+
 
