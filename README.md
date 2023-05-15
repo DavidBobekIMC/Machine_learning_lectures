@@ -7,6 +7,7 @@
 ### Lecture 3 - Random Forest, ADAboost and XGBoost, Ensembling, Tune
 ### Lecture 4 - KNN and Decision Trees = in KNN we tune K and the number of neighbors
 
+
 ### Elearning - Data support vectors
 
 ## Topics: 
@@ -258,3 +259,7 @@ Soft clustering: each data point has a probability of belonging to multiple clus
 ```
 ```text
 * Silhouette score = maximising the silhoute score for each cluster
+```
+
+## Hierarichical clustering
+
